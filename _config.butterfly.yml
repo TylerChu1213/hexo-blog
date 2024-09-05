@@ -1,0 +1,154 @@
+# 配置参考
+# https://butterfly.js.org/
+# https://blog.csdn.net/middle_age666/article/details/141507929
+# https://blog.csdn.net/mjh1667002013/article/details/129290903
+
+# Navigation bar settings (導航欄設置)
+# see https://butterfly.js.org/posts/4aa8abbe/##導航欄設置-Navigation-bar-settings
+# --------------------------------------
+
+nav:
+  logo: # image
+  display_title: true
+  fixed: false # fixed navigation bar
+
+# Menu 目錄
+menu:
+  # Home: / || fas fa-home
+  # Archives: /archives/ || fas fa-archive
+  # Tags: /tags/ || fas fa-tags
+  # Categories: /categories/ || fas fa-folder-open
+  # List||fas fa-list:
+  #   Music: /music/ || fas fa-music
+  #   Movie: /movies/ || fas fa-video
+  # Link: /link/ || fas fa-link
+  # About: /about/ || fas fa-heart
+
+# Code Blocks (代碼相關)
+# --------------------------------------
+
+highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
+highlight_copy: true # copy button
+highlight_lang: true # show the code language
+highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
+highlight_height_limit: false # unit: px
+code_word_wrap: false
+
+# Avatar (頭像)
+avatar:
+  img: /img/avatar.png
+  effect: false
+
+# Disable all banner image
+disable_top_img: false
+
+# The banner image of home page
+index_img: /img/index.png
+
+# If the banner of page not setting, it will show the top_img
+default_top_img: /img/index.png
+
+# the subtitle on homepage (主頁subtitle)
+subtitle:
+  enable: true
+  # Typewriter Effect (打字效果)
+  effect: true
+  # Customize typed.js (配置typed.js)
+  # https://github.com/mattboldt/typed.js/#customization
+  typed_option:
+  # source 調用第三方服務
+  # source: false 關閉調用
+  # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
+  # source: 2  調用一句網（簡體） https://yijuzhan.com/
+  # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
+  # subtitle 會先顯示 source , 再顯示 sub 的內容
+  source: 1
+  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
+  sub:
+    - '今日事，今日毕'
+    - '人生没有白走的路，每一步都算数'
+    - '你若盛开，清风自来'
+    - '你若安好，便是晴天'
+
+# copy settings
+# copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 50
+
+# Post
+# --------------------------------------
+
+# toc (目錄)
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false # for post
+  scroll_percent: true
+
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# Sponsor/reward
+reward:
+  enable: false
+  text:
+  QR_code:
+    # - img: /img/wechat.jpg
+    #   link:
+    #   text: wechat
+    # - img: /img/alipay.jpg
+    #   link:
+    #   text: alipay
+
+# Post edit
+# Easily browse and edit blog source code online.
+post_edit:
+  enable: false
+  # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
+  # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
+  url:
+
+# Related Articles
+related_post:
+  enable: true
+  limit: 6 # Number of posts displayed
+  date_type: created # or created or updated 文章日期顯示創建日或者更新日
+
+# post_pagination (分頁)
+# value: 1 || 2 || false
+# 1: The 'next post' will link to old post
+# 2: The 'next post' will link to new post
+# false: disable pagination
+post_pagination: 1
+
+# Displays outdated notice for a post (文章過期提醒)
+noticeOutdate:
+  enable: false
+  style: flat # style: simple/flat
+  limit_day: 500 # When will it be shown
+  position: top # position: top/bottom
+  message_prev: It has been
+  message_next: days since the last update, the content of the article may be outdated.
+
+# Local search
+local_search:
+  enable: true
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}" # 如果没有查到内容相关内容显示
+  # Preload the search data when the page loads.
+  preload: false
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  CDN:
