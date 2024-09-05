@@ -16,7 +16,7 @@ jobs:
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
       - name: Use Node.js 20.16.0
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2·
         with:
           node-version: '20.16.0'
       - name: Cache NPM dependencies
